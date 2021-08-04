@@ -98,13 +98,47 @@ console.log("########################");
 
 let start4 = 0;
 let swappedName = "elZerO";
+let str = "";
 
 for (let f = start4; f < swappedName.length ; f++){
-  if (swappedName[f].toLowerCase()){
-    swappedName.toUpperCase()
-  }
-  
-  console.log(swappedName[f])
+	swappedName[f] === swappedName[f].toLowerCase()
+		? (str += swappedName[f].toUpperCase())
+		: (str += swappedName[f].toLowerCase());
+}
+console.log(str);
+
+console.log("########################");
+
+
+let start5 = 0;
+let mix = [1, 2, 3, "A", "B", "C", 4];
+
+for (let i = start5; i < mix.length; i++) {
+	if (!(mix[i] === mix[start5] || typeof mix[i] !== "number")) {
+		console.log(mix[i]);
+	}
 }
 
 console.log("########################");
+
+let frind = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+let ind = 0;
+let counter = 0;
+
+let validNames = [];
+
+while (counter < frind.length) {
+	if (
+		typeof frind[counter] === "string" &&
+		frind[counter][ind].toLowerCase() !== "a"
+	) {
+		validNames.push(frind[counter]);
+	}
+	counter++;
+}
+
+while (ind < validNames.length) {
+	console.log(`"${ind + true} => ${validNames[ind]}"`);
+	ind++;
+}
+
